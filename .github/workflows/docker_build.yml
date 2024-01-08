@@ -37,6 +37,10 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+      - name: test
+        run: |   
+          cat ${{ steps.meta.outputs.tags }}
       
       - name: Run Container
         run: |   
