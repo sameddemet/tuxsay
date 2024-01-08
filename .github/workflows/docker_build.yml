@@ -40,7 +40,7 @@ jobs:
       
       - name: Run Container
         run: |   
-          docker run --rm -it sameddemet/tuxsay-full:main 2> /dev/null >> README.md
+          docker run --rm ***/tuxsay-full:main 2> /dev/null >> README.md
 
       - name: upload artifact
         uses: actions/upload-artifact@v4
