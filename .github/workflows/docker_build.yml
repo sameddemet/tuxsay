@@ -41,7 +41,12 @@ jobs:
       - name: test
         run: |   
           echo "${{ steps.meta.outputs.tags }}"
-      
+  
+  edit_readme:
+    name: send tuxsay to readme
+    needs: push_to_registry
+    runs-on: self-hosted
+    steps:
       - name: Run Container
         run: |   
           docker run --rm ***/tuxsay-full:main Hello-World
@@ -51,12 +56,6 @@ jobs:
         with:
           name: readme
           path: README.md
-  
-  edit_readme:
-    name: send tuxsay to readme
-    needs: push_to_registry
-    runs-on: self-hosted
-    steps:
       - name: Download production artifacts
         uses: actions/download-artifact@v4
         with:
