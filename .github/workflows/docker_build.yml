@@ -37,3 +37,16 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+  
+  edit_readme:
+    name: send tuxsay to readme
+    needs: push_to_registry
+    runs-on: self-hosted
+    steps:
+      - name: Check out dockerfile
+        uses: actions/checkout@v4
+
+      - name: Edit readme
+        run: |
+          docker pull sameddemet/tuxsay-full
+          docker run --rm sameddemet/tuxsay-full 2> /dev/null >> README.md
