@@ -44,7 +44,7 @@ jobs:
       
       - name: Run Container
         run: |   
-          docker run --rm ***/tuxsay-full:main 
+          docker run --rm ***/tuxsay-full:main Hello-World
 
       - name: upload artifact
         uses: actions/upload-artifact@v4
