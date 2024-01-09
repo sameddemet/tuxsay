@@ -2,8 +2,6 @@ name: test to build docker image
 
 on:
   push:
-    branches:
-      - 'main'
     tags:
       - '*'
   workflow_dispatch:
@@ -38,6 +36,6 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
-          
+
 
   
