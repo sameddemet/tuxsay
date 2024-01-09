@@ -10,7 +10,7 @@ Tuxsay est un outil amusant qui affiche des messages divertissants prononcés pa
 
 ```bash
 docker pull sameddemet/tuxsay-full
-docker run --rm sameddemet/tuxsay-full Hello-World
+docker run --rm sameddemet/tuxsay-full "Hello, I'am here for you, say what you want ?"
 ```
 
 ```bash
