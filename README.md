@@ -1,12 +1,12 @@
-# Image Docker Tuxsay
+# Docker Image Tuxsay
 
-Ce projet vise à créer une image Docker originale de Tuxsay et à la documenter pour le dépôt Docker Hub. L'image est disponible en deux versions : "full" et "small".
+This project aims to create a Docker image of Tuxsay (Python) and publish it on Docker Hub using GitHub Actions. The image is available in two versions: "full" and "small".
 
-## Qu'est-ce que Tuxsay ?
+## What is Tuxsay?
 
-Tuxsay est un outil amusant qui affiche des messages divertissants prononcés par la mascotte mignonne de Linux, Tux (le pingouin qui est la mascotte de Linux).
+Tuxsay is a fun tool that displays entertaining messages spoken by the cute mascot of Linux, Tux (the penguin who is the Linux mascot).
 
-## Utilisation
+## Usage
 
 ```bash
 docker pull sameddemet/tuxsay-full
